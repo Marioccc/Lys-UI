@@ -1,18 +1,19 @@
 <template>
   <div id="app">
-    <lys/>
+    <h1>Lys UI</h1>
+    <lys-form/>
     <lys-tree/>
   </div>
 </template>
 
 <script>
-import Lys from './components/LysForm'
+import LysForm from './components/LysForm'
 import LysTree from './components/LysTree'
 
 export default {
   name: 'App',
   components: {
-    Lys,
+    LysForm,
     LysTree
   }
 }

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input :value='value' @input="inputEvent" v-bind="$attrs">
+        <input :value='value' @input="inputEvent" v-bind="$attrs" @blur="validate">
     </div>
 </template>
 
@@ -16,6 +16,9 @@
         methods: {
             inputEvent(e) {
                 this.$emit('input', e.target.value)
+            },
+            validate() {
+                this.$parent.$emit('validate')
             }
         },
     }

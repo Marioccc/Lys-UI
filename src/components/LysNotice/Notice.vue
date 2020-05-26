@@ -1,5 +1,5 @@
 <template>
-    <div class="notice">
+    <div :class="styles">
         <p>{{title}}</p>
     </div>
 </template>
@@ -11,22 +11,32 @@
                 type: String,
                 default: ''
             },
-            message: {
+            type: {
                 type: String,
-                default: ''
+                default: 'success'
+            },
+        },
+        data() {
+            return {
+                styles: `notice ${this.type}`
             }
         },
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .notice {
     width: 200px;
-    background-color: green;
     top: 1rem;
     right: 1rem;
     z-index: 999;
     position: fixed;
     display: flex;
+}
+.success {
+    background-color: green;
+}
+.error {
+    background-color: red;
 }
 </style>

@@ -1,7 +1,10 @@
 <template>
-    <ul>
-        <tree :model='model' />
-    </ul>
+    <div>
+        <h2>Tree 树形控件</h2>
+        <ul>
+            <tree :model='model' />
+        </ul>
+    </div>
 </template>
 
 <script>
